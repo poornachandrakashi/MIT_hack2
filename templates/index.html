@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Aakraman 2.0</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="static/assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="#intro">Welcome</a></li>
+                    <li><a href="#one">Chatbot</a></li>
+                    <li><a href="#two">Xray classification</a></li>
+                    <li><a href="#three">Cough analysis</a></li>
+                    <li><a href="#three">Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Intro -->
+        <section id="intro" class="wrapper style1 fullscreen fade-up">
+            <div class="inner">
+                <h1>Aakraman 2.0</h1>
+                <p>An online diagnosis platform for the identification of Covid19. Made In India
+                    <a href=""></a><br /> </p>
+                <ul class="actions">
+                    <li><a href="#one" class="button scrolly">Chat bot </a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- One -->
+        <section id="one" class="wrapper style2 spotlights">
+            <section>
+                <a href="{url_for('audio')}}" class="image"><img src="static/images/mic.jpg" alt="" data-position="25% 25%" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Identification of Covid19 using Audio sample.</h2>
+                        <p>Know whether your came in contact with any infected person.</p>
+                        <ul class="actions">
+                            <li><a href="{url_for('audio')}}" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <a href="#" class="image"><img src="static/images/chatbot.png" alt="" data-position="center center" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>AI powered Chatbot which takes your audio samples and gives you the prediction.</h2>
+                        <p>It's AI powered chat bot developed </p>
+                        <ul class="actions">
+                            <li><a href="#" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <a href="{url_for('xray')}}" class="image"><img src="static/images/xray.jpg" alt="" data-position="top center" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Identification of covid 19 using X ray images.</h2>
+                        <p>We have used convolutional neural networin in classification of the images.</p>
+                        <ul class="actions">
+                            <li><a href="{{url_for('xray')}}" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Two -->
+        <section id="two" class="wrapper style3 fade-up">
+            <div class="inner">
+                <h2>Covid 19 statistics</h2>
+                <p>Current covid19 status in India.</p>
+                <div class="features">
+                    {{ table | safe }}
+                </div>
+                <ul class="actions">
+                    <li><a href="#" class="button">Learn more</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Three -->
+        <section id="three" class="wrapper style1 fade-up">
+            <div class="inner">
+                <h2>Get in touch</h2>
+                <!-- <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p> -->
+                <div class="split style1">
+                    <section>
+                        <form method="post" action="#">
+                            <div class="fields">
+                                <div class="field half">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" />
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email" />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><a href="" class="button submit">Send Message</a></li>
+                            </ul>
+                        </form>
+                    </section>
+                    <section>
+                        <ul class="contact">
+                            <li>
+                                <h3>Address</h3>
+                                <span>Bangalore<br />
+											<!-- Nashville, TN 00000-0000<br /> -->
+											India</span>
+                            </li>
+                            <li>
+                                <h3>Email</h3>
+                                <a href="#">Aakraman</a>
+                            </li>
+                            <li>
+                                <h3>Phone</h3>
+                                <span>(+91)8904700354 </span>
+                            </li>
+                            <li>
+                                <h3>Social</h3>
+                                <ul class="icons">
+                                    <li><a href="https://twitter.com/home" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="https://www.facebook.com/poornachandra.kashi" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                    <li><a href="https://github.com/poornachandrakashi" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                                    <li><a href="https://www.instagram.com/mr_hackster123l/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="https://www.linkedin.com/in/poornachandra-kashi-a13529168/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; All rights reserved to Aakraman Team.</li>
+                <li>
+                    <a href="https://poornachandrakashi.github.io">Poornachandra and Team</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="static/assets/js/jquery.min.js"></script>
+    <script src="static/assets/js/jquery.scrollex.min.js"></script>
+    <script src="static/assets/js/jquery.scrolly.min.js"></script>
+    <script src="static/assets/js/browser.min.js"></script>
+    <script src="static/assets/js/breakpoints.min.js"></script>
+    <script src="static/assets/js/util.js"></script>
+    <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
